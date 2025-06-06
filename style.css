@@ -1,1 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Контейнер для всего содержимого */
+.content-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Заголовок и навигация */
+.header h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease-in-out;
+}
+
+.nav a:hover {
+    color: blue;
+}
+
+/* Герой секции */
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.discription {
+    line-height: 1.5;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Новости */
+.news-section {
+    margin-top: 40px;
+}
+
+.news-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.btn-catalog {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color .3s ease-in-out;
+}
+
+.btn-catalog:hover {
+    background-color: #eeb300;
+}
