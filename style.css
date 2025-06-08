@@ -1,87 +1,186 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --primary-color: #ff6b00;
+  --background-light: #f9f9f9;
+  --background-dark: #1e1e1e;
+  --text-light: #1e1e1e;
+  --text-dark: #f1f1f1;
+  --accent-gradient: linear-gradient(45deg, #ff6b00, #ffa600);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Контейнер для всего содержимого */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.btn-theme-toggle {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  background: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+
+body.dark-theme .btn-theme-toggle {
+  border-color: #666;
+  color: #fff;
+}
+
+body.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
 .content-wrapper {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* Заголовок и навигация */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
 .header h1 {
-    font-size: 2em;
-    text-align: center;
-    color: #333;
+  font-size: 2em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
 }
 
 .nav a {
-    text-decoration: none;
-    color: black;
-    transition: all .3s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  color: inherit;
 }
 
 .nav a:hover {
-    color: blue;
+  background: var(--accent-gradient);
+  color: white;
 }
 
-/* Герой секции */
 .hero {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+body.dark-theme .hero {
+  background: #2a2a2a;
 }
 
 .hero-text h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .discription {
-    line-height: 1.5;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Новости */
-.news-section {
-    margin-top: 40px;
-}
-
-.news-list li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .btn-catalog {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color .3s ease-in-out;
+  background: var(--accent-gradient);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
 }
 
 .btn-catalog:hover {
-    background-color: #eeb300;
+  transform: scale(1.05);
 }
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.news-section {
+  margin-top: 40px;
+}
+
+.news-list {
+  padding-left: 20px;
+}
+
+.news-list li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 12px;
+}
+
+body.dark-theme .footer {
+  background-color: #2b2b2b;
+}
+
+/* Кнопка темы */
+.btn-theme-toggle {
+  background: none;
+  border: 2px solid #aaa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
+}
+
