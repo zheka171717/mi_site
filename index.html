@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Главная</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <div class="content-wrapper">
+  <div class="content-wrapper">
     <header class="header">
-        <nav class="nav">
-   <H1>Магазин спорт техники</H1>
-            <ul class="nav-links">
-            <li><a href="">Каталог</a></li>
+      <h1>Магазин спорттехники</h1>
+      <button onclick="toggleTheme()" class="btn-theme-toggle">🌙 / ☀️</button>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="katolog.html">Каталог</a></li>
+          <li><a href="#">О нас</a></li>
         </ul>
-    </nav>
+      </nav>
     </header>
 
-    <main class="main"> 
-        <section class="hero">
-            <div class="hero-text">
-<h2>МотоЛэнд</h2>
-<p class="discription">Лучший магазин спорт техники в вашем городе, достваим в любую точку страны!</p>
+    <main class="main">
+      <section class="hero">
+        <div class="hero-text">
+          <h2>МотоЛэнд</h2>
+          <p class="discription">
+            Лучший магазин спортивной техники в вашем городе. Доставим в любую точку страны!
+          </p>
+          <a class="btn-catalog" href="katolog.html">Перейти в каталог</a>
         </div>
         <div class="hero-image">
-            <img src="../site/img/logo.jpg">
-       </div> 
-       <section class="news-section">
-      <h2>Новости</h2>
-      <ul class="news-list">
-        <li>🔥 У нас появился Багги  просим вас ознакомиться с ним в каталоге!!!</li>
-        <div class="buttons">
-            <button><a href="katolog.html"> Каталог</a></button>
-           </div> 
-      </ul>
-    </section>
-    </section>
+          <img src="../img/лого2.png" alt="Изображение магазина" />
+        </div>
+      </section>
+
+      <section class="news-section">
+        <h2>Новости</h2>
+        <ul class="news-list">
+          <li>🔥 У нас появился багги! Ознакомьтесь с ним в <a href="katolog.html">каталоге</a>!</li>
+        </ul>
+      </section>
     </main>
+
+    <footer class="footer">
+      <p>© 2025 Магазин спорттехники. Все права защищены.</p>
+    </footer>
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>
 
 
 </body>
